@@ -21,18 +21,7 @@ namespace MoodAnalyzerTest
 
             Assert.AreEqual(expectedValue, result);
         }
-        //Display Happy message
-        //TC 1.2
-        [TestMethod]
-        public void GivenSadMoodMessage_WhenAnalyse_ShouldReturnHAPPY()
-        {
-
-            string message = "I am happy mood";
-            string expectedValue = "HAPPY";
-            MoodAnalyser moodAnalyser = new MoodAnalyser();
-            string result = moodAnalyser.AnalyseMood(message);
-            Assert.AreEqual(expectedValue, result);
-        }
+        
 
     }
 }
