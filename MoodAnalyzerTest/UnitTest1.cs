@@ -6,16 +6,21 @@ namespace MoodAnalyzerTest
     [TestClass]
     public class UnitTest1
     {
-        //UC2
-        // TC 2.1: Given null mood Should Return HAPPY
+        //UC3
+        //TC 3.1
         [TestMethod]
-        public void GivenNullMoodShouldReturnHAPPY()
+        public void GivenNullMessage_WhenAnalyse_ShouldReturnHappy()
         {
-            string expected = "HAPPY";
             string message = null;
-            MoodAnalyser moodAnalyse = new MoodAnalyser(message);
-            string mood = moodAnalyse.AnalyseMood();
-            Assert.AreEqual(expected, mood);
+            MoodAnalyser moodAnalyzer = new MoodAnalyser(message);
+            try
+            {
+                string actutal = moodAnalyzer.AnalyseMood();
+            }
+            catch (MoodAnalyserException ex)
+            {
+                Assert.AreEqual(ex.Message, "Message is Null");
+            }
         }
 
     }
