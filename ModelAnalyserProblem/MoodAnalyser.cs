@@ -16,12 +16,12 @@ namespace MoodAnalyserProblem
         }
         public string AnalyseMood()
         {
+            if (message == string.Empty)
+            {
+                throw new MoodAnalyserException(MoodAnalyserException.ExceptionType.EMPTY_MOOD, "Message is Empty");
+            }
             try
             {
-                if (string.IsNullOrEmpty(message))
-                {
-                    throw new MoodAnalyserException(MoodAnalyserException.ExceptionType.EMPTY_MOOD, "Message is Empty");
-                }
                 if (message.Contains("Sad"))
                 {
                     return "SAD";
@@ -33,7 +33,7 @@ namespace MoodAnalyserProblem
             }
             catch (MoodAnalyserException)
             {
-                throw new MoodAnalyserException(MoodAnalyserException.ExceptionType.NULL_MOOD, "Message is ull");
+                throw new MoodAnalyserException(MoodAnalyserException.ExceptionType.NULL_MOOD, "Message is Null");
             }
         }
     }
