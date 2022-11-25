@@ -6,10 +6,11 @@ namespace MoodAnalyserProblem
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("How is your mood Happy or Sad");
-            string message = Console.ReadLine();
-            MoodAnalyser moodAnalyzer = new MoodAnalyser();
-            Console.WriteLine(moodAnalyzer.AnalyseMood(message));
+            Console.WriteLine("Welcome to Mood Analyser");
+            //Console.WriteLine("How is your mood Happy or Sad");
+            //string message = Console.ReadLine();
+            //MoodAnalyser moodAnalyzer = new MoodAnalyser();
+            //Console.WriteLine(moodAnalyzer.AnalyseMood(message));
         }
     }
 }
